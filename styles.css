@@ -1,0 +1,148 @@
+/* Сброс базовых стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Общие стили для сайта */
+body {
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Стили для формы */
+form {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  max-width: 600px;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Кнопки */
+button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+
+#addDeviceBtn {
+  background-color: #28a745;
+  color: #fff;
+  margin-left: auto;
+}
+
+#calculateBtn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+#resetBtn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Блок таблицы */
+#results-container {
+  max-width: 100%;
+  overflow-x: auto; /* Если приборов очень много, появится горизонтальный скролл */
+  margin-top: 1rem;
+}
+
+#results-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+#results-table th,
+#results-table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#results-table thead {
+  background-color: #e9ecef;
+}
+
+.device-header {
+  position: relative; /* чтобы расположить иконки справа */
+  padding-right: 2rem;
+}
+
+/* Стиль для чекбокса включения/выключения прибора */
+.toggle-device {
+  margin-right: 0.5rem;
+}
+
+/* Кнопка удаления (крестик) в заголовке каждой колонки прибора */
+.remove-device-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+/* Для адаптивности */
+@media (max-width: 600px) {
+  fieldset {
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 0;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    margin-bottom: 1rem;
+  }
+}
